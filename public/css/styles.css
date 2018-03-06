@@ -1,0 +1,391 @@
+/*Copyright 2017 Gabized.com -- 7 september 2017 11:35 -- */
+
+/*we have bootstrap styles in different files, this one defines additional styles*/
+
+/*also I don't like bootstrap so some positioning issues are inevitable.*/
+
+body {
+    overflow-x: hidden;
+}
+
+body, p, div, span, tr, td {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.topblack {
+    padding: 20px 0px;
+    width: 110%; /*not going to worry about why's right now.*/
+    background: #252525 url(../images/bg.png);
+}
+    .logo {
+        max-height: 75px;
+        width: auto;
+    }
+    .topmenu {
+        width: 110%;
+        background: #fdb353;
+        padding:0px;
+    }
+        .topmenu ul.nav {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+            .topmenu ul.nav li {
+                display: inline-block;
+            }
+                .topmenu ul.nav li a {
+                    color: #202020;
+                    text-transform: uppercase;
+                    font-size: 21px;
+                    padding: 21px 18px;
+                    text-decoration: none;
+                    font-family: 'Open Sans Condensed', sans-serif;
+                }
+                .topmenu ul.nav li a:hover, .topmenu ul.nav li.active a {
+                    color: #fff;
+                    background: #202020;
+                }
+            .topmenu .search {
+                float: right;
+                background-color: #fdac44;
+                  padding-top: 21px;
+                  padding-bottom: 22px;
+            }
+                .search input {
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    position: relative;
+                    width: 280px;
+                    font-size: 18px !important;
+                    text-indent: 10px;
+                    font-family: 'Open Sans Condensed', sans-serif !important;
+                }
+                .search input:focus {
+                    outline-width: 0px;
+                      outline-style: none;
+                      outline-color: #fdac44;
+                }
+                    .search button {
+                        position: absolute;
+                        right: 0px;
+                        top: 21px;
+                        background: none;
+                        border:none;
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: 20px;
+                    }
+
+.slider {
+    /*width: 100%;
+    background: #fff;
+    height: 500px;
+    background: url(../images/member-5f34a0.jpg) no-repeat center center;*/
+}/*temporary*/
+
+.threeblocks {
+    width: 100%;
+    padding: 25px 0px;
+    background: #d1d1d1;
+
+    display: none;/*for now*/
+}
+
+.homecontent {
+    min-height: 190px;
+    margin-top: 50px;
+    /*margin-bottom: 50px; no margin for this nice bg to sit flush with the footer*/
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+    background: url(../images/footer.png) no-repeat bottom center;
+    background-size: 100% auto;
+}
+
+.pagecontent {
+    min-height: 600px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.footer {
+    width: 110%;
+    background: #202020;
+    padding: 10px 0px;
+}
+    .yeslogo {
+        text-align: right;
+    }
+    .footer h4 {
+        color: #fff;
+        font-size: 16px;
+    }
+
+/*helpers*/
+.clr {
+    clear: both;
+}
+.mtop {
+    margin-top: 20px;
+}
+    .mtop30 {
+        margin-top: 30px
+    }
+    .mtop40 {
+        margin-top: 40px;
+    }
+.mbottom {
+    margin-bottom: 20px;
+}
+.mleft {
+    margin-left: 20px;
+}
+.mright {
+    margin-right: 20px;
+}
+.acenter {
+    text-align: center;
+}
+.aright {
+    text-align: right;
+}
+/*end helpers*/
+
+/*slider for homepage. dead simple*/
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  height: 600px;
+}
+
+/*#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 600px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 600px;
+  background: #ccc;
+  text-align: center;
+  line-height: 600px;
+}*/
+    #slider h1 {
+        padding: 100px 0 0 800px;
+        font-size: 48px;
+        text-transform: capitalize;
+    }
+
+/* Slider CSS */
+.slide {
+  height: 600px;
+}
+
+.sss {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.ssslide {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.sssnext, .sssprev {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('https://static.tumblr.com/ztaetns/rQ1nfk553/arr.png') no-repeat;
+}
+
+.sssprev {
+	left: 0;
+	background-position: 0 50%;
+}
+
+.sssnext {
+	right: 0;
+	background-position: -26px 50%;
+}
+
+.sssprev:hover, .sssnext:hover {
+	cursor: pointer;
+}
+
+/*a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 1.5% 1%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}*/
+/*end slider*/
+
+.abs {
+    position: absolute;
+    z-index: 9999;
+}
+.full {
+    width: 100%;
+}
+
+p {
+    font-size: 15px;
+  font-weight: 400;
+  color: #9d9999;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans Condensed', sans-serif !important;
+}
+
+h2 {
+    font-size: 26px !important;
+    color: #202020 !important;
+    line-height: 185% !important;
+}
+    h2 a {
+        color: #202020;
+        border-bottom: 1px solid #202020;
+        padding-bottom: 5px !important;
+    }
+    h2 a:hover {
+        color: #fdb353 !important;
+        border-bottom: 1px solid #fdb353;
+        text-decoration: none;
+    }
+
+h3 {
+    font-size: 26px !important;
+    color: #202020;
+}
+
+h5 {
+    font-size: 18px !important;
+    color: #202020;
+}
+
+h4 {
+  font-size: 23px !important;
+  font-weight: 400;
+  color: #868686;
+  display: inline-block;
+  padding-left: 30px;
+  margin-top: 20px !important;
+}
+    h4 a {
+        text-decoration: none;
+        color: #868686;
+    }
+        h4 a:hover {
+            color: #868686;
+            text-decoration: underline;
+        }
+    h4 i {
+        font-size: 23px !important;
+        color: #868686 !important
+    }
+
+a.socials {
+    color: #202020;
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+iframe, embed {
+    border: none;
+}
+
+#contact input, #contact textarea {
+    border-radius: 0px;
+}
+.form-control {
+  -o-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border-color: #dedede;
+  background-color: transparent;
+  min-height: 60px;
+  font-family: 'Open Sans Condensed';
+  font-size: 20px;
+  font-weight: 400;
+  color: #202020;
+  letter-spacing: 2px;
+}
+.form-control:hover,
+.form-control:focus,
+.form-control:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border-color: #202020;
+}
+
+.yeslogo img {
+    margin-top: 15px;
+}
